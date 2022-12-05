@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+	 crossorigin="anonymous"></script>
+	 
+
+
+
+	<script src="./js/contractDeploy.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="d-flex justify-content-end my-1 px-3 py-1" style="background-color: darkgray">
+			<button class="btn btn-dark" id="refresh" onclick="location.reload(true);">Refresh
+				<i class="fas fa-sync-alt"></i>
+			</button>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<h3>
+					<span class="badge badge-secondary w-100">Deploy Contracts</span>
+				</h3>
+				<div id="list"></div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<h3>
+					<span class="badge badge-secondary w-100">Update Contracts</span>
+				</h3>
+				<div id="setValues"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<body>
+
+</html>

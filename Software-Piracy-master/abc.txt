@@ -1,0 +1,31 @@
+URL website;
+    
+    URL url = new URL(baseURL+"getfid");
+      System.out.println("huwhefhiowhiwwqeqwheiqhhuqei");
+			    	    	        URLConnection con = url.openConnection();
+			    	    	        HttpURLConnection http = (HttpURLConnection)con;
+			    	    	        http.setRequestMethod("POST"); // PUT is another valid option
+			    	    	        http.setDoOutput(true);
+			    	    	        Map<String,String> arguments = new HashMap<>();
+			    	    	        arguments.put("contractadd",txAddress);
+			    	    	        StringJoiner sj = new StringJoiner("&");
+			    	    	        for(Map.Entry<String,String> entry : arguments.entrySet())
+			    	    	            sj.add(URLEncoder.encode(entry.getKey(), "UTF-8") + "="
+			    	    	                    + URLEncoder.encode(entry.getValue(), "UTF-8"));
+			    	    	        byte[] out = sj.toString().getBytes(StandardCharsets.UTF_8);
+			    	    	        int length = out.length;
+			    	    	        http.setFixedLengthStreamingMode(length);
+			    	    	        http.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+			    	    	        http.connect();
+			    	    	        try(OutputStream os = http.getOutputStream()) {
+			            os.write(out);
+			            os.close();
+			        }
+			        catch(Exception e1) {
+			        	e1.printStackTrace();
+			        }
+			        res = http.getResponseCode();
+			        System.out.println("huwhefhiowhiwwqeqwheiqhhuqei");
+			        System.out.println(res+" "+txAddress);
+			        
+    
